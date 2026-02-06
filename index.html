@@ -8,17 +8,27 @@
     <meta name="theme-color" content="#34D399">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta property="og:title" content="Portale Teocratico">
+    <meta property="og:description" content="Strumenti digitali per Incarichi teocratici e svago">
+    <meta property="og:image" content="https://asarritzu-boop.github.io/Portale_Teocratico/icona-512.png">
+    <meta property="og:url" content="https://asarritzu-boop.github.io/Portale_Teocratico/">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://asarritzu-boop.github.io/Portale_Teocratico/icona-512.png">
+
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" href="icona-192.png">
     <link rel="icon" type="image/png" href="icona-192.png">
 
     <style>
         :root {
-            --ios-green: #34D399; /* Il verde esatto dell'anello luminoso */
-            --bg-color: #F2F2F7;
+            --ios-green: #34D399;   /* Verde anello icona */
+            --bg-color: #213B52;    /* Blu scuro sfondo icona */
             --card-bg: #FFFFFF;
-            --text-main: #000000;
-            --text-secondary: #8E8E93;
+            --text-main: #FFFFFF;   /* Testo bianco per sfondo scuro */
+            --text-secondary: #A0AEC0;
         }
 
         body {
@@ -30,9 +40,9 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            min-height: 100vh;
         }
 
-        /* Header */
         header {
             text-align: center;
             margin-top: 30px;
@@ -43,8 +53,9 @@
             width: 120px;
             height: 120px;
             border-radius: 25px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
             margin-bottom: 15px;
+            border: 2px solid rgba(255,255,255,0.1);
         }
 
         h1 {
@@ -58,11 +69,10 @@
             font-size: 14px;
             color: var(--text-secondary);
             margin-top: 5px;
-            max-width: 250px;
+            max-width: 280px;
             line-height: 1.3;
         }
 
-        /* Menu Grid */
         .menu-container {
             width: 100%;
             max-width: 500px;
@@ -78,14 +88,13 @@
             display: flex;
             align-items: center;
             text-decoration: none;
-            color: inherit;
-            transition: transform 0.2s ease, background-color 0.2s ease;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            color: #000000; /* Testo nero dentro le card bianche */
+            transition: transform 0.2s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
         .card:active {
-            transform: scale(0.97);
-            background-color: #E5E5EA;
+            transform: scale(0.96);
         }
 
         .card-icon {
@@ -103,36 +112,29 @@
         .card-title {
             font-size: 16px;
             font-weight: 600;
-            margin-bottom: 3px;
             display: block;
         }
 
         .card-desc {
             font-size: 12px;
-            color: var(--text-secondary);
+            color: #636E72;
             line-height: 1.2;
             display: block;
         }
 
-        /* Share Button */
         .share-btn {
-            margin-top: 30px;
+            margin-top: 40px;
             background-color: var(--ios-green);
-            color: white;
+            color: #213B52; /* Testo scuro sul verde per contrasto */
             border: none;
-            padding: 12px 25px;
-            border-radius: 25px;
-            font-weight: 600;
-            font-size: 15px;
+            padding: 14px 30px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 16px;
             cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            /* Ombra del pulsante coordinata */
-            box-shadow: 0 4px 12px rgba(52, 211, 153, 0.3); 
+            box-shadow: 0 5px 15px rgba(52, 211, 153, 0.4);
         }
 
-        /* Responsive per Desktop */
         @media (min-width: 768px) {
             .menu-container {
                 display: grid;
@@ -153,32 +155,32 @@
         <a href="https://asarritzu-boop.github.io/Anagrafica/index.html" class="card">
             <img src="anagrafica.png" class="card-icon">
             <div class="card-content">
-                <span class="card-title">ANAGRAFICA CONGREGAZIONE</span>
-                <span class="card-desc">Gestione moduli S-21 e anagrafica generale.</span>
+                <span class="card-title">ANAGRAFICA</span>
+                <span class="card-desc">Moduli S-21 e gestione locale.</span>
             </div>
         </a>
 
         <a href="https://asarritzu-boop.github.io/Discorsi_Pubblici/index.html" class="card">
             <img src="discorsi.png" class="card-icon">
             <div class="card-content">
-                <span class="card-title">GESTIONE DISCORSI PUBBLICI</span>
-                <span class="card-desc">Tool per appuntamenti oratori esterni e locali.</span>
+                <span class="card-title">DISCORSI PUBBLICI</span>
+                <span class="card-desc">Appuntamenti e oratori.</span>
             </div>
         </a>
 
         <a href="https://asarritzu-boop.github.io/Rapporto_di_Servizio/index.html" class="card">
             <img src="rapporto.png" class="card-icon">
             <div class="card-content">
-                <span class="card-title">RAPPORTO DI SERVIZIO</span>
-                <span class="card-desc">Calcolatore ore pionieri e multiprofilo famiglia.</span>
+                <span class="card-title">RAPPORTO SERVIZIO</span>
+                <span class="card-desc">Calcolatore ore pionieri.</span>
             </div>
         </a>
 
         <a href="https://asarritzu-boop.github.io/Tabella-Informazioni-Castelsardo/index.html" class="card">
             <img src="tabella.png" class="card-icon">
             <div class="card-content">
-                <span class="card-title">TABELLA INFORMAZIONI</span>
-                <span class="card-desc">Comunicazioni e programmi della congregazione.</span>
+                <span class="card-title">TABELLA INFO</span>
+                <span class="card-desc">Programmi e comunicazioni.</span>
             </div>
         </a>
 
@@ -186,30 +188,28 @@
             <img src="giochi.png" class="card-icon">
             <div class="card-content">
                 <span class="card-title">GIOCHI BIBLICI</span>
-                <span class="card-desc">Ispirati a celebri programmi TV.</span>
+                <span class="card-desc">Quiz e intrattenimento.</span>
             </div>
         </a>
     </div>
 
     <button class="share-btn" onclick="shareApp()">
-        Condividi App
+        CONDIVIDI APP
     </button>
 
     <script>
-        // Funzione Condividi
         function shareApp() {
             if (navigator.share) {
                 navigator.share({
                     title: 'Portale Teocratico',
-                    text: 'Accedi agli strumenti digitali per la congregazione.',
+                    text: 'Accedi agli strumenti digitali della congregazione.',
                     url: 'https://asarritzu-boop.github.io/Portale_Teocratico/'
                 }).catch(console.error);
             } else {
-                alert("La funzione di condivisione non è supportata dal tuo browser. Copia il link manualmente.");
+                alert("Copia questo link: https://asarritzu-boop.github.io/Portale_Teocratico/");
             }
         }
 
-        // Registrazione Service Worker
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('sw.js');
         }
