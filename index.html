@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Portale Teocratico</title>
+    
+    <meta name="theme-color" content="#34D399">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icona-192.png">
+    <link rel="icon" type="image/png" href="icona-192.png">
+
+    <style>
+        :root {
+            --ios-green: #34D399; /* Il verde esatto dell'anello luminoso */
+            --bg-color: #F2F2F7;
+            --card-bg: #FFFFFF;
+            --text-main: #000000;
+            --text-secondary: #8E8E93;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: env(safe-area-inset-top) 20px 40px 20px;
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .main-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 25px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-top: 5px;
+            max-width: 250px;
+            line-height: 1.3;
+        }
+
+        /* Menu Grid */
+        .menu-container {
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 18px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .card:active {
+            transform: scale(0.97);
+            background-color: #E5E5EA;
+        }
+
+        .card-icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 12px;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            flex: 1;
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 3px;
+            display: block;
+        }
+
+        .card-desc {
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.2;
+            display: block;
+        }
+
+        /* Share Button */
+        .share-btn {
+            margin-top: 30px;
+            background-color: var(--ios-green);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            /* Ombra del pulsante coordinata */
+            box-shadow: 0 4px 12px rgba(52, 211, 153, 0.3); 
+        }
+
+        /* Responsive per Desktop */
+        @media (min-width: 768px) {
+            .menu-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="icona-512.png" alt="Logo" class="main-icon">
+        <h1>PORTALE TEOCRATICO</h1>
+        <p class="subtitle">Strumenti digitali per Incarichi teocratici e per lo svago</p>
+    </header>
+
+    <div class="menu-container">
+        <a href="https://asarritzu-boop.github.io/Anagrafica/index.html" class="card">
+            <img src="anagrafica.png" class="card-icon">
+            <div class="card-content">
+                <span class="card-title">ANAGRAFICA CONGREGAZIONE</span>
+                <span class="card-desc">Gestione moduli S-21 e anagrafica generale.</span>
+            </div>
+        </a>
+
+        <a href="https://asarritzu-boop.github.io/Discorsi_Pubblici/index.html" class="card">
+            <img src="discorsi.png" class="card-icon">
+            <div class="card-content">
+                <span class="card-title">GESTIONE DISCORSI PUBBLICI</span>
+                <span class="card-desc">Tool per appuntamenti oratori esterni e locali.</span>
+            </div>
+        </a>
+
+        <a href="https://asarritzu-boop.github.io/Rapporto_di_Servizio/index.html" class="card">
+            <img src="rapporto.png" class="card-icon">
+            <div class="card-content">
+                <span class="card-title">RAPPORTO DI SERVIZIO</span>
+                <span class="card-desc">Calcolatore ore pionieri e multiprofilo famiglia.</span>
+            </div>
+        </a>
+
+        <a href="https://asarritzu-boop.github.io/Tabella-Informazioni-Castelsardo/index.html" class="card">
+            <img src="tabella.png" class="card-icon">
+            <div class="card-content">
+                <span class="card-title">TABELLA INFORMAZIONI</span>
+                <span class="card-desc">Comunicazioni e programmi della congregazione.</span>
+            </div>
+        </a>
+
+        <a href="https://asarritzu-boop.github.io/PuzzleNGames-/" class="card">
+            <img src="giochi.png" class="card-icon">
+            <div class="card-content">
+                <span class="card-title">GIOCHI BIBLICI</span>
+                <span class="card-desc">Ispirati a celebri programmi TV.</span>
+            </div>
+        </a>
+    </div>
+
+    <button class="share-btn" onclick="shareApp()">
+        Condividi App
+    </button>
+
+    <script>
+        // Funzione Condividi
+        function shareApp() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Portale Teocratico',
+                    text: 'Accedi agli strumenti digitali per la congregazione.',
+                    url: 'https://asarritzu-boop.github.io/Portale_Teocratico/'
+                }).catch(console.error);
+            } else {
+                alert("La funzione di condivisione non è supportata dal tuo browser. Copia il link manualmente.");
+            }
+        }
+
+        // Registrazione Service Worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
+</body>
+</html>
