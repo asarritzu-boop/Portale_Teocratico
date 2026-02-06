@@ -4,7 +4,7 @@
   "description": "Strumenti digitali per Incarichi teocratici e svago",
   "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#F2F2F7",
+  "background_color": "#213B52",
   "theme_color": "#34D399",
   "icons": [
     {
