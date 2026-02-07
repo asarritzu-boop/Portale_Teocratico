@@ -24,47 +24,60 @@
 
     <style>
         :root {
-            --ios-green: #34D399;   /* Verde anello icona */
-            --bg-color: #213B52;    /* Blu scuro sfondo icona */
-            --card-bg: #FFFFFF;
-            --text-main: #FFFFFF;   /* Testo bianco per sfondo scuro */
-            --text-secondary: #A0AEC0;
-        }
+        --ios-green: #34D399;   /* Verde neon dell'anello */
+        --bg-color: #213B52;    /* Blu scuro dell'icona */
+        --card-bg: #FFFFFF;
+        --text-main: #FFFFFF;
+        --text-secondary: #A0AEC0;
+    }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: env(safe-area-inset-top) 20px 40px 20px;
-            color: var(--text-main);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
+    /* Reset per eliminare bordi bianchi */
+    html, body {
+        height: 100%;
+        margin: 0;
+        background-color: var(--bg-color);
+    }
 
-        header {
-            text-align: center;
-            margin-top: 30px;
-            margin-bottom: 30px;
-        }
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        padding: env(safe-area-inset-top) 20px 40px 20px;
+        color: var(--text-main);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        box-sizing: border-box;
+    }
 
-        .main-icon {
-            width: 120px;
-            height: 120px;
-            border-radius: 25px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-            margin-bottom: 15px;
-            border: 2px solid rgba(255,255,255,0.1);
-        }
+    header {
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
 
-        h1 {
-            font-size: 24px;
-            font-weight: 700;
-            margin: 0;
-            letter-spacing: -0.5px;
-        }
+    /* Icona con ALONE NEON */
+    .main-icon {
+        width: 130px;
+        height: 130px;
+        border-radius: 30px;
+        margin-bottom: 15px;
+        border: 2px solid var(--ios-green);
+        /* Effetto neon: tre strati di ombra per massima luminosità */
+        box-shadow: 
+            0 0 10px var(--ios-green), 
+            0 0 20px var(--ios-green), 
+            0 0 40px rgba(52, 211, 153, 0.4);
+        background-color: var(--bg-color);
+    }
 
+    h1 {
+        font-size: 26px;
+        font-weight: 800;
+        margin: 0;
+        letter-spacing: -0.5px;
+        /* Opzionale: anche il titolo con un leggero riflesso neon */
+        text-shadow: 0 0 10px rgba(52, 211, 153, 0.3);
+    }
         .subtitle {
             font-size: 14px;
             color: var(--text-secondary);
