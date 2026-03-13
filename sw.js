@@ -1,4 +1,4 @@
-const CACHE_NAME = 'portale-teocratico-v1';
+const CACHE_NAME = 'portale-teocratico-v2';
 const assets = [
   './',
   './index.html',
@@ -8,7 +8,8 @@ const assets = [
   './discorsi.png',
   './rapporto.png',
   './tabella.png',
-  './giochi.png'
+  './giochi.png',
+  './ODG.png'
 ];
 
 self.addEventListener('install', e => {
@@ -17,6 +18,16 @@ self.addEventListener('install', e => {
       return cache.addAll(assets);
     })
   );
+  self.skipWaiting();
+});
+
+self.addEventListener('activate', e => {
+  e.waitUntil(
+    caches.keys().then(keys =>
+      Promise.all(keys.filter(k => k !== CACHE_NAME).map(k => caches.delete(k)))
+    )
+  );
+  self.clients.claim();
 });
 
 self.addEventListener('fetch', e => {
