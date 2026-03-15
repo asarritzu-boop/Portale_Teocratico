@@ -9,7 +9,8 @@ const assets = [
   './rapporto.png',
   './tabella.png',
   './giochi.png',
-  './ODG.png'
+  './ODG.png',
+  './archivio.png'
 ];
 
 self.addEventListener('install', e => {
