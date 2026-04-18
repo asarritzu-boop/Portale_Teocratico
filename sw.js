@@ -7,8 +7,8 @@ const assets = [
   './anagrafica.png',
   './discorsi.png',
   './Territori.png',
-  './rapporto.png',
-  './tabella.png',
+  './Visita.png',
+  './rapporto.png'
   './giochi.png',
   './ODG.png',
   './archivio.png'
